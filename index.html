@@ -6,40 +6,36 @@
   <title>Myサイト</title>
   <style>
     body {
-      <!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GitHub Pages Example</title>
-</head>
-<body>
-    <h1>GitHub Pagesで画像を表示</h1>
-  
-    <!-- 画像1 -->
-    <img src="images/images/387ad5ef5a262698c82d806b82c74b5d.jpg" alt="TOP画像" width="500">
-
-    <!-- 画像2 -->
-    <img src="images/images/リメイクロゴ2.png" alt="TOP画像" width="500">
-      
-</body>
-</html>
       margin: 0;
       font-family: sans-serif;
       background: black;
       color: white;
       display: flex;
-      justify-content: center;
+      flex-direction: column;
       align-items: center;
-      height: 100vh;
+      padding: 2rem;
     }
     h1 {
       font-size: 3rem;
       text-align: center;
+      margin-bottom: 2rem;
+    }
+    img {
+      margin: 1rem 0;
+      max-width: 90%;
+      height: auto;
+      border: 2px solid white;
     }
   </style>
 </head>
 <body>
-  <h1> ホームページへようこそ！</h1>
+  <h1>ホームページへようこそ！</h1>
+
+  <!-- 画像1 -->
+  <img src="images/387ad5ef5a262698c82d806b82c74b5d.jpg" alt="TOP画像1">
+
+  <!-- 画像2 -->
+  <img src="images/リメイクロゴ2.png" alt="TOP画像2">
+
 </body>
 </html>
