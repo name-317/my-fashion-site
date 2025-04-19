@@ -1,119 +1,23 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Brand</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+.menu-items {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100vh;
+  background-color: white; /* 背景を白に */
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* 上寄せに変更 */
+  align-items: flex-start;     /* 左寄せに変更 */
+  padding: 60px 20px;          /* メニュー内に余白追加 */
+  transition: left 0.3s ease;
+  z-index: 1000;
+}
 
-    body {
-      font-family: 'Helvetica Neue', sans-serif;
-      background-color: white;
-      color: black;
-    }
-
-    /* ハンバーガーボタン */
-    .menu-button {
-      position: fixed;
-      top: 20px;
-      left: 20px;
-      z-index: 1001;
-      cursor: pointer;
-    }
-
-    .menu-line {
-      width: 30px;
-      height: 3px;
-      background-color: black;
-      margin: 6px 0;
-    }
-
-    /* スライドメニュー */
-    .menu-items {
-      position: fixed;
-      top: 0;
-      left: -250px;
-      width: 250px;
-      height: 100vh;
-      background-color: rgba(0, 0, 0, 0.95);
-      color: white;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      transition: left 0.3s ease;
-      z-index: 1000;
-    }
-
-    .menu-items.active {
-      left: 0;
-    }
-
-    .menu-items a {
-      color: white;
-      text-decoration: none;
-      font-size: 1.5rem;
-      margin: 20px 0;
-    }
-
-    /* トップ画像 */
-    .hero-image {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    /* テキスト */
-    .brand-text {
-      text-align: center;
-      font-size: 2.5rem;
-      font-weight: bold;
-      margin: 2rem 0;
-    }
-
-    .section {
-      padding: 50px;
-      text-align: center;
-    }
-  </style>
-</head>
-<body>
-
-  <!-- ハンバーガーボタン -->
-  <div class="menu-button" onclick="toggleMenu()">
-    <div class="menu-line"></div>
-    <div class="menu-line"></div>
-    <div class="menu-line"></div>
-  </div>
-
-  <!-- スライドメニュー -->
-  <div class="menu-items" id="menu">
-    <a href="#">ALL ITEM</a>
-    <a href="#">NEW ARRIVAL</a>
-    <a href="#">CATEGORIES</a>
-  </div>
-
-  <!-- トップ画像 -->
-  <img src="images/002.jpg" alt="トップ画像" class="hero-image">
-
-  <!-- ブランド名 -->
-  <div class="brand-text">MY BRAND</div>
-
-  <div class="section">
-    <p>ここにブランドの紹介や商品情報を追加していきましょう。</p>
-  </div>
-
-  <script>
-    function toggleMenu() {
-      const menu = document.getElementById("menu");
-      menu.classList.toggle("active");
-    }
-  </script>
-
-</body>
-</html>
+.menu-items a {
+  color: black;                 /* 文字色を黒に */
+  text-decoration: none;
+  font-size: 1.2rem;            /* 少し小さめに */
+  margin: 15px 0;
+}
