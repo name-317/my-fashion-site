@@ -35,28 +35,31 @@
 
     /* スライドメニュー */
     .menu-items {
-    position: fixed;
-    top: 0;
-    left: -250px;
-    width: 250px;
-    height: 100vh;
-    background-color: white; /* 背景を白に */
-    color: black;
-　　 display: flex;
-　　 flex-direction: column;
-　　 justify-content: flex-start; /* 上寄せに変更 */
-    align-items: flex-start;     /* 左寄せに変更 */
-    padding: 60px 20px;          /* メニュー内に余白追加 */
-    transition: left 0.3s ease;
-    z-index: 1000;
-　　}
+      position: fixed;
+      top: 0;
+      left: -250px;
+      width: 250px;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.95);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transition: left 0.3s ease;
+      z-index: 1000;
+    }
 
-　　.menu-items a {
-    color: black;                 /* 文字色を黒に */
-    text-decoration: none;
-    font-size: 1.2rem;            /* 少し小さめに */
-    margin: 15px 0;
-　　}
+    .menu-items.active {
+      left: 0;
+    }
+
+    .menu-items a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.5rem;
+      margin: 20px 0;
+    }
 
     /* トップ画像 */
     .hero-image {
