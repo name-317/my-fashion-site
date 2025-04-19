@@ -15,17 +15,22 @@
       align-items: center;
       padding: 2rem;
     }
+    .img-rotate {
+      transform: rotate(90deg);
+    }
     img {
       margin: 1rem 0;
       max-width: 90%;
       height: auto;
-      /* 枠を削除しました */
     }
   </style>
 </head>
 <body>
 
-  <img src="images/001.jpg" alt="TOP画像1">
+  <!-- 横向きにする画像（クラスを追加） -->
+  <img src="images/001.jpg" alt="TOP画像1" class="img-rotate">
+
+  <!-- 通常の画像 -->
   <img src="images/remake-rogo1.png" alt="TOP画像2">
 
 </body>
