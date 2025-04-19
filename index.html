@@ -103,6 +103,41 @@
       padding: 50px;
       text-align: center;
     }
+
+    .product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.product-card {
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid #ccc;
+  padding: 10px;
+  transition: box-shadow 0.3s;
+}
+
+.product-card:hover {
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+}
+
+.view-more-btn {
+  display: inline-block;
+  margin: 30px auto;
+  padding: 10px 20px;
+  background: black;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+    
   </style>
 </head>
 <body>
@@ -143,6 +178,29 @@
       menu.classList.toggle("active");
     }
   </script>
+
+  <h2 class="section-title">NEW IN</h2>
+<div class="product-grid">
+  <a href="https://minne.com/items/38875749" class="product-card" target="_blank">
+    <img src="images/38875749.jpg" alt="for for hap pouch :) Hug me" />
+    <h3>for for hap pouch :) Hug me</h3>
+    <p>¥3,410</p>
+  </a>
+  <a href="https://minne.com/items/36617670" class="product-card" target="_blank">
+    <img src="images/36617670.jpg" alt="omamori bag -Usui(雨水)-" />
+    <h3>omamori bag -Usui(雨水)-</h3>
+    <p>価格は商品ページをご確認ください</p>
+  </a>
+  <a href="https://minne.com/items/36617799" class="product-card" target="_blank">
+    <img src="images/36617799.jpg" alt="omamori bag -Seimei(清明)-" />
+    <h3>omamori bag -Seimei(清明)-</h3>
+    <p>価格は商品ページをご確認ください</p>
+  </a>
+  <!-- 他の商品も同様に追加できます -->
+</div>
+
+<a href="products.html" class="view-more-btn">VIEW MORE</a>
+
 
 </body>
 </html>
