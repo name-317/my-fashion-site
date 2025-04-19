@@ -3,35 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Myサイト</title>
+  <title>My Brand</title>
   <style>
-    body {
+    * {
       margin: 0;
-      font-family: sans-serif;
-      background: white;
-      color: black;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      padding: 0;
+      box-sizing: border-box;
     }
-    .img-full {
+
+    html, body {
+      height: 100%;
+      font-family: 'Helvetica Neue', sans-serif;
+    }
+
+    .hero {
+      position: relative;
       width: 100%;
-      transform: rotate(90deg); /* 必要に応じて削除 */
+      height: 100vh;
+      background-image: url('images/001.jpg'); /* ← 自分の画像に変更してね */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
     }
-    .img-normal {
-      margin: 1rem 0;
-      max-width: 90%;
-      height: auto;
+
+    .overlay-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 3rem;
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-align: center;
     }
   </style>
 </head>
 <body>
 
-  <!-- 横幅いっぱい＆横向き（回転が不要なら rotate は削除OK） -->
-  <img src="images/001.jpg" alt="TOP画像1" class="img-full">
-
-  <!-- 通常の画像 -->
-  <img src="images/remake-rogo1.png" alt="TOP画像2" class="img-normal">
+  <div class="hero">
+    <div class="overlay-text">MY BRAND</div> <!-- ここをロゴ画像にしてもOK -->
+  </div>
 
 </body>
 </html>
