@@ -54,19 +54,20 @@
     .menu-items.active {
       left: 0;
     }
-    
-    /* ロゴを中央に配置 */
+
+    /* ロゴを右寄せで下に配置 */
     .menu-logo-wrapper {
       width: 100%;
       display: flex;
       justify-content: flex-end;
       margin-top: 80px;
       margin-bottom: 40px;
-      padding-right: 10px
+      padding-right: 10px;
     }
-    
+
     .menu-logo {
       width: 200px;
+      height: auto;
     }
 
     /* メニューリンクを左寄せ */
@@ -82,19 +83,7 @@
       font-size: 1.2rem;
       margin: 10px 0;
     }
-    
-    .menu-items a {
-      color: black;
-      text-decoration: none;
-      font-size: 1.2rem;
-      margin: 15px 0;
-    }
-    
-    .menu-logo {
-      width: 120px;
-      margin-bottom: 30px;
-    }
-          
+
     /* トップ画像 */
     .hero-image {
       width: 100%;
@@ -102,7 +91,7 @@
       display: block;
     }
 
-    /* テキスト */
+    /* ブランドテキスト */
     .brand-text {
       text-align: center;
       font-size: 2.5rem;
@@ -127,23 +116,14 @@
 
   <!-- スライドメニュー -->
   <div class="menu-items" id="menu">
-    <img src="images/remake-rogo1.png" alt="ロゴ" class="menu-logo">
-    <a href="#" onclick="toggleMenu()">ALL ITEM</a>
-    <a href="#" onclick="toggleMenu()">NEW ARRIVAL</a>
-    <a href="#" onclick="toggleMenu()">CATEGORIES</a>
+    <div class="menu-logo-wrapper">
+      <img src="images/remake-rogo1.png" alt="ロゴ" class="menu-logo">
     </div>
-    
-    <!-- ロゴ -->
-  <div class="menu-logo-wrapper">
-    <img src="images/remake-rogo1.png" alt="ロゴ" class="menu-logo">
-  </div>
-  
-  <!-- メニュー項目 -->
-  <nav class="menu-links">
-    <a href="#">ALL ITEM</a>
-    <a href="#">NEW ARRIVAL</a>
-    <a href="#">CATEGORIES</a>
-  </nav>
+    <nav class="menu-links">
+      <a href="#" onclick="toggleMenu()">ALL ITEM</a>
+      <a href="#" onclick="toggleMenu()">NEW ARRIVAL</a>
+      <a href="#" onclick="toggleMenu()">CATEGORIES</a>
+    </nav>
   </div>
 
   <!-- トップ画像 -->
