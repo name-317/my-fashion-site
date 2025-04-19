@@ -46,7 +46,7 @@
       flex-direction: column;
       justify-content: flex-start;
       align-items: flex-start;
-      padding: 60px 20px;
+      padding: 40px 20px;
       transition: left 0.3s ease;
       z-index: 1000;
     }
@@ -54,7 +54,33 @@
     .menu-items.active {
       left: 0;
     }
+    
+    /* ロゴを中央に配置 */
+    .menu-logo-wrapper {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 40px;
+    }
+    
+    .menu-logo {
+      width: 120px;
+    }
 
+    /* メニューリンクを左寄せ */
+    .menu-links {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .menu-links a {
+      color: black;
+      text-decoration: none;
+      font-size: 1.2rem;
+      margin: 10px 0;
+    }
+    
     .menu-items a {
       color: black;
       text-decoration: none;
@@ -99,14 +125,23 @@
 
   <!-- スライドメニュー -->
   <div class="menu-items" id="menu">
+    <img src="images/logo.png" alt="ロゴ" class="menu-logo">
+    <a href="#" onclick="toggleMenu()">ALL ITEM</a>
+    <a href="#" onclick="toggleMenu()">NEW ARRIVAL</a>
+    <a href="#" onclick="toggleMenu()">CATEGORIES</a>
+    </div>
     
     <!-- ロゴ -->
-  <img src="images/remake-rogo1.png" alt="ロゴ" class="menu-logo">
-
+  <div class="menu-logo-wrapper">
+    <img src="images/logo.png" alt="ロゴ" class="menu-logo">
+  </div>
+  
   <!-- メニュー項目 -->
+  <nav class="menu-links">
     <a href="#">ALL ITEM</a>
     <a href="#">NEW ARRIVAL</a>
     <a href="#">CATEGORIES</a>
+  </nav>
   </div>
 
   <!-- トップ画像 -->
