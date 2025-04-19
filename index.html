@@ -13,12 +13,12 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 2rem;
     }
-    .img-rotate {
-      transform: rotate(90deg);
+    .img-full {
+      width: 100%;
+      transform: rotate(90deg); /* 必要に応じて削除 */
     }
-    img {
+    .img-normal {
       margin: 1rem 0;
       max-width: 90%;
       height: auto;
@@ -27,11 +27,11 @@
 </head>
 <body>
 
-  <!-- 横向きにする画像（クラスを追加） -->
-  <img src="images/001.jpg" alt="TOP画像1" class="img-rotate">
+  <!-- 横幅いっぱい＆横向き（回転が不要なら rotate は削除OK） -->
+  <img src="images/001.jpg" alt="TOP画像1" class="img-full">
 
   <!-- 通常の画像 -->
-  <img src="images/remake-rogo1.png" alt="TOP画像2">
+  <img src="images/remake-rogo1.png" alt="TOP画像2" class="img-normal">
 
 </body>
 </html>
