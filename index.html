@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>My Brand</title>
   <style>
     * {
@@ -17,19 +17,12 @@
       color: black;
     }
 
-    /* ヘッダー画像 */
-    .hero-image {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    /* ハンバーガーメニュー */
+    /* ハンバーガーメニューのボタン */
     .menu-button {
       position: fixed;
       top: 20px;
       left: 20px;
-      z-index: 10;
+      z-index: 1001;
       cursor: pointer;
     }
 
@@ -40,39 +33,43 @@
       margin: 6px 0;
     }
 
-    /* メニュー項目 */
+    /* メニュー本体 */
     .menu-items {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
-      height: 100vh;
+      height: 100%;
       background-color: rgba(0, 0, 0, 0.9);
-      color: white;
       display: none;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      z-index: 9;
-    }
-
-    .menu-items a {
-      color: white;
-      text-decoration: none;
-      font-size: 2rem;
-      margin: 20px 0;
-      transition: 0.3s;
-    }
-
-    .menu-items a:hover {
-      text-decoration: underline;
+      z-index: 1000;
     }
 
     .menu-items.active {
       display: flex;
     }
 
-    /* 中央テキスト */
+    .menu-items a {
+      color: white;
+      font-size: 2rem;
+      text-decoration: none;
+      margin: 20px 0;
+    }
+
+    .menu-items a:hover {
+      text-decoration: underline;
+    }
+
+    /* 画像とテキスト */
+    .hero-image {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
     .brand-text {
       text-align: center;
       font-size: 2.5rem;
@@ -80,7 +77,6 @@
       margin: 2rem 0;
     }
 
-    /* 余白追加用セクション */
     .section {
       padding: 50px;
       text-align: center;
@@ -90,30 +86,20 @@
 <body>
 
   <!-- ハンバーガーメニュー -->
-  <div class="menu-button" onclick="toggleMenu()">
+  <div class="menu-button" id="menuBtn">
     <div class="menu-line"></div>
     <div class="menu-line"></div>
     <div class="menu-line"></div>
   </div>
 
-  <!-- メニュー項目 -->
+  <!-- メニューの中身 -->
   <div class="menu-items" id="menu">
     <a href="#">ALL ITEM</a>
     <a href="#">NEW ARRIVAL</a>
     <a href="#">CATEGORIES</a>
   </div>
 
-  <!-- ヒーロー画像 -->
+  <!-- トップ画像 -->
   <img src="images/002.jpg" alt="トップ画像" class="hero-image">
 
-  <!-- テキスト -->
-  <div class="brand-text">MY BRAND</div>
-
-  <!-- 下に続くセクション -->
-  <div class="section">
-    <p>ここにコンテンツを追加できます。</p>
-    <p>スクロールして画像が上に移動するように見えます。</p>
-  </div>
-
-  <script>
-    function toggleMenu()
+  <!-- ブランド名
